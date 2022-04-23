@@ -13,8 +13,7 @@ namespace project1
         }
         void Start()
         {
-            List<double> array = ReadNumberArray();
-            Console.WriteLine(Average(array));
+            AllowUserToCalcAVG();
         }
         double Average(List<double> numbers)
         {
@@ -29,12 +28,17 @@ namespace project1
             while (true)
             {
                 Console.Write("please enter needed numbers if all numbers have been added type stop: ");
-                string number = Console.ReadLine();
-                if (number == "stop")
+                string input = Console.ReadLine();
+                if (input == "stop")
                     break;
-                array.Add(double.Parse(number));
+                array.Add(double.Parse(input));
             }
             return array;
+        }
+        void AllowUserToCalcAVG()
+        {
+            List<double> array = ReadNumberArray();
+            Console.WriteLine(Average(array));
         }
     }
 }
