@@ -4,7 +4,7 @@ using System.Text;
 
 namespace project1
 {
-    internal class Average
+    internal class Total
     {
     }
 }
