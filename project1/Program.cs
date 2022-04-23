@@ -13,32 +13,8 @@ namespace project1
         }
         void Start()
         {
-            AllowUserToCalcAVG();
-        }
-        double Average(List<double> numbers)
-        {
-            double total = 0;
-            foreach (double number in numbers)
-                total += number;
-            return total / numbers.Count;
-        }
-        List<double> ReadNumberArray()
-        {
-            List<double> array = new List<double>();
-            while (true)
-            {
-                Console.Write("please enter needed numbers if all numbers have been added type stop: ");
-                string input = Console.ReadLine();
-                if (input == "stop")
-                    break;
-                array.Add(double.Parse(input));
-            }
-            return array;
-        }
-        void AllowUserToCalcAVG()
-        {
-            List<double> array = ReadNumberArray();
-            Console.WriteLine(Average(array));
+            Average average = new Average();
+            average.AllowUserToCalcAVG();
         }
     }
 }
