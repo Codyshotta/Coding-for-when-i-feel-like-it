@@ -4,7 +4,14 @@ using System.Text;
 
 namespace project1
 {
-    internal class Average
+    internal class Average : Math2
     {
+        public override double Calculate(List<double> numbers)
+        {
+             double total = 0;
+             foreach (double number in numbers)
+             total += number;
+             return total / numbers.Count;
+        }
     }
 }

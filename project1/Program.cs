@@ -13,7 +13,7 @@ namespace project1
         }
         void Start()
         {
-            Math2 average = new Math2();
+            Total average = new Total();
             average.AllowUserToInputNumbers();
         }
     }

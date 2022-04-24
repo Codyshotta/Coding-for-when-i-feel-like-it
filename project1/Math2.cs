@@ -28,17 +28,15 @@ namespace project1
         public void AllowUserToInputNumbers()
         {
             List<double> array = ReadNumberArray();
-            if (Choose() == true)
-                Console.WriteLine(CalculateTotal(array));
-            else Console.WriteLine(CalculateAverage(array));
+            Console.WriteLine(Calculate(array)); 
         }
-        bool Choose()
-        {
-            Console.Write("do you want the total or average? 0 for total 1 for average: ");
-            string input = Console.ReadLine();
-            if (input == "0")
-                return true;
-            return false;
-        }
+        //bool Choose()
+        //{
+        //    Console.Write("do you want the total or average? 0 for total 1 for average: ");
+        //    string input = Console.ReadLine();
+        //    if (input == "0")
+        //        return true;
+        //    return false;
+        //}
     }
 }
