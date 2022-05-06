@@ -13,9 +13,9 @@ namespace project1
         }
         void Start()
         {
-            Average average = new Average();
-            //Total total = new Total();
-            average.AllowUserToInputNumbers();
+            //Average average = new Average();
+            Total total = new Total();
+            total.AllowUserToInputNumbers();
         }
     }
 }
