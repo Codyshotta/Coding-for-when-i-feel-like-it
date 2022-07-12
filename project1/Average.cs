@@ -10,7 +10,7 @@ namespace project1
         {
              double total = 0;
              foreach (double number in numbers)
-             total += number;
+                total += number;
              return total / numbers.Count;
         }
     }

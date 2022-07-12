@@ -13,9 +13,32 @@ namespace project1
         }
         void Start()
         {
-            //Average average = new Average();
-            Total total = new Total();
-            total.AllowUserToInputNumbers();
+            try
+            {
+                Console.Write("Please enter if you want to calculate the total or average. ");
+                string input = Console.ReadLine().ToLower();
+                Math2 math2 = CheckInput(input);
+                math2.AllowUserToInputNumbers();
+            }
+            catch (Exception ex) { Console.WriteLine(ex.Message); }
+
+        }
+
+        private Math2 CheckInput(string input)
+        {
+            if (input == "average" || input == "total")
+            {
+                switch (input)
+                {
+                    case "average":
+                        return new Average();
+                    case "total":
+                        return new Total();
+                }
+            }
+            else
+                throw new Exception("invalid value entered.");
+            return new Average();
         }
     }
 }
